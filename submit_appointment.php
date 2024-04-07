@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $time = $_POST["time"];
 
     // Email details
-    $to = "your-email@example.com"; // Replace with your email address
+    $to = "asgarbayli.agshin@gmail.com"; // Replace with your email address
     $subject = "Appointment Request";
     $message = "Name: $name\n";
     $message .= "Email: $email\n";
