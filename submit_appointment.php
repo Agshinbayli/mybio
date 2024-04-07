@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $message .= "Preferred Time: $time\n";
 
     // Send email using Formspree
-    $url = "https://formspree.io/asgarbayli.agshin@gmail.com"; //  endpoint
+    $url = "https://formspree.io/f/moqgpjye"; //  endpoint
     $fields = [
         'name' => $name,
         'email' => $email,
