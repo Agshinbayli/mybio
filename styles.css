@@ -1,8 +1,15 @@
-<<<<<<< HEAD
-body {
-    font-family: Arial, sans-serif;
+/* Resetting default margin and padding */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa; /* Light gray background */
+    color: #333; /* Dark text color */
+    line-height: 1.6; /* Improved readability */
 }
 
 header {
@@ -10,6 +17,7 @@ header {
     color: #fff;
     text-align: center;
     padding: 20px 0;
+    margin-bottom: 20px; /* Add some space below the header */
 }
 
 nav ul {
@@ -28,62 +36,64 @@ nav ul li a {
     color: #fff;
 }
 
+nav ul li a.active {
+    font-weight: bold; /* Make the active page's text bold */
+}
+
 main {
     padding: 20px;
 }
 
 section {
-    margin-bottom: 20px;
+    margin-bottom: 40px; /* Increase the space between sections */
 }
 
 footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-}
-=======
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-header {
     background-color: #333;
     color: #fff;
     text-align: center;
     padding: 20px 0;
 }
 
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #fff;
-}
-
-main {
+/* Form styles */
+form {
+    background-color: #fff;
     padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
 }
 
-section {
+form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="date"],
+form input[type="time"],
+form textarea {
+    width: 100%;
+    padding: 10px;
     margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
-footer {
+form textarea {
+    resize: vertical; /* Allow vertical resizing of textarea */
+}
+
+form button[type="submit"] {
     background-color: #333;
     color: #fff;
-    text-align: center;
-    padding: 10px 0;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
 }
->>>>>>> 6e516a285f74b12c7137164fca8adebf7e1aa2da
+
+form button[type="submit"]:hover {
+    background-color: #555;
+}

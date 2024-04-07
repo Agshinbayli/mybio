@@ -8,15 +8,37 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $time = $_POST["time"];
 
     // Email details
-    $to = "aqsinbeyli@gmail.com"; // Change this to your email address
+    $to = "asgarbayli.agshin@gmail.com"; // Replace with your email address
     $subject = "Appointment Request";
     $message = "Name: $name\n";
     $message .= "Email: $email\n";
     $message .= "Preferred Date: $date\n";
     $message .= "Preferred Time: $time\n";
 
-    // Send email
-    if (mail($to, $subject, $message)) {
+    // Send email using Formspree
+    $url = "https://formspree.io/f/moqgpjye"; // Formspree endpoint
+    $data = [
+        'name' => $name,
+        'email' => $email,
+        'date' => $date,
+        'time' => $time,
+        'subject' => $subject,
+        'message' => $message
+    ];
+
+    $options = [
+        'http' => [
+            'header' => "Content-type: application/x-www-form-urlencoded\r\n",
+            'method' => 'POST',
+            'content' => http_build_query($data)
+        ]
+    ];
+
+    $context = stream_context_create($options);
+    $result = file_get_contents($url, false, $context);
+
+    // Check if email was sent successfully
+    if ($result !== false) {
         echo "<p>Thank you for your appointment request. We will contact you shortly.</p>";
     } else {
         echo "<p>Failed to send appointment request. Please try again later.</p>";
