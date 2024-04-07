@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $time = $_POST["time"];
 
     // Email details
-    $to = "aqsinbeyli@gmail.com"; // This should be your email address
+    $to = "asgarbayli.agshin@gmail.com"; //  email address
     $subject = "Appointment Request";
     $message = "Name: $name\n";
     $message .= "Email: $email\n";
@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $message .= "Preferred Time: $time\n";
 
     // Send email using Formspree
-    $url = "https://formspree.io/aqsinbeyli@gmail.com"; // Replace with your Formspree endpoint
+    $url = "https://formspree.io/asgarbayli.agshin@gmail.com"; //  endpoint
     $fields = [
         'name' => $name,
         'email' => $email,
