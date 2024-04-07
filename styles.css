@@ -36,6 +36,10 @@ nav ul li a {
     color: #fff;
 }
 
+nav ul li a.active {
+    font-weight: bold; /* Make the active page's text bold */
+}
+
 main {
     padding: 20px;
 }
